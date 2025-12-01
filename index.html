@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient American Civilizations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffe29f, #ffa99f);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4b2e83;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px; /* room for 3 buttons */
+            gap: 20px;
+        }
+
+        .civilization-btn {
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff7f50;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1; /* buttons expand equally */
+        }
+
+        .civilization-btn:hover {
+            background-color: #ff5722;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+
+        .info-card {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .civilization-image {
+    width: auto;      /* maintain aspect ratio */
+    height: 150px;    /* smaller height */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ancient American Civilizations</h1>
+
+    <div class="button-row">
+        <div>
+            <button class="civilization-btn" onclick="toggleInfo('inca')">Inca</button>
+            <div id="inca" class="info-card">
+                Terrace. Inca terraces turned steep mountains into farmland. The Inca lived in the high Andes. To farm on steep slopes they built terraces—flat steps cut into the hill—so crops could grow without washing away. Terraces also trapped soil and held water for crops. Road & Mountain Pass. Roads connected towns across mountains so people and goods could move. The Inca built a vast road system across mountains and valleys. These roads let messengers, armies, and traders move quickly so remote towns could receive food and messages from the capital.
+            </div>
+             <img class="civilization-image" src="https://i.natgeofe.com/k/c69e6e4e-bd6b-4909-833d-55492fdb7c3e/Machu-Picchu_Inca_KIDS_0323.jpg?w=1436&h=958" alt="Inca Civilization">
+        </div>
+
+        <!-- Placeholder for future buttons -->
+        <div>
+            <button class="civilization-btn" onclick="toggleInfo('maya')">Maya</button>
+            <div id="maya" class="info-card">
+                The Maya built near rivers for water and trade.  The Maya built cities near rivers and in the rainforest. Rain and rivers gave water for crops like maize and beans. Thick forests made farming harder, so people cleared land and sometimes made small terraces. Rivers also helped people travel and trade between towns. Farmers cleared patches of forest and built terraces for planting. Because the rainforest had thick roots and heavy soils, Maya farmers cleared patches to plant crops. In some places they built soil terraces to hold water and prevent erosion. These methods helped communities grow enough food for towns.
+            </div>
+            <img class="civilization-image" src="https://cdn.mos.cms.futurecdn.net/yCd4gZSnLtb2xdrbvTRqD9-1200-80.jpg.webp" alt="Inca Civilization">
+        </div>
+
+        <div>
+            <button class="civilization-btn" onclick="toggleInfo('aztec')">Aztec</button>
+            <div id="aztec" class="info-card">
+               Chinampa (Floating Garden). Chinampas are floating gardens built on the lake that allowed year-round crops. he Aztec capital sat in a lake. To grow food, they made chinampas — raised soil beds on the water. These floating gardens stayed fertile and produced vegetables and maize all year, which fed many people in the city. Causeway & Market. Causeways and bridges connected islands and markets — making trade possible. The city used causeways—raised roads over water—to connect land to the island capital. Markets on causeways and city plazas allowed merchants to sell food and goods, which was easier because the lake made travel by canoe simple.
+            </div>
+            <img class="civilization-image" src="https://www.mexicohistorico.com/img/Aztec-Technology--Innovations-in-Agriculture-and-Architecture.webp" alt="Inca Civilization">
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo(id) {
+            const infoDiv = document.getElementById(id);
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+            } else {
+                infoDiv.style.display = "none";
+            }
+        }
+    </script>
+    <!-- Civilization Input Form -->
+<div style="margin-top: 60px; width: 100%; max-width: 700px; background: rgba(255,255,255,0.95); padding: 30px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.2);">
+    <h2 style="text-align:center; margin-bottom: 30px; color:#4b2e83;">Add a Civilization</h2>
+    <form style="display: flex; flex-direction: column; gap: 20px;">
+        
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <label style="width: 160px; font-weight: bold;">Name of Civilization:</label>
+            <input type="text" placeholder="Enter name" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <label style="width: 160px; font-weight: bold;">Main Idea:</label>
+            <input type="text" placeholder="Enter main idea" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <label style="width: 160px; font-weight: bold;">Supporting Detail 1:</label>
+            <input type="text" placeholder="Enter detail" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <label style="width: 160px; font-weight: bold;">Supporting Detail 2:</label>
+            <input type="text" placeholder="Enter detail" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+            <label style="width: 160px; font-weight: bold; margin-top: 6px;">Summary:</label>
+            <textarea placeholder="Enter summary" rows="6" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; resize: vertical;"></textarea>
+        </div>
+
+        <div style="text-align:center; margin-top: 10px;">
+            <button type="submit" style="padding: 12px 28px; font-size: 18px; font-weight: bold; color: #fff; background-color: #4b2e83; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease;">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+
+</body>
+</html>
